@@ -1,0 +1,20 @@
+{
+  "name": "myalipay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didiXueniao/lvliqiji.git"
+  },
+  "author": "L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didiXueniao/lvliqiji/issues"
+  },
+  "homepage": "https://github.com/didiXueniao/lvliqiji#readme"
+}
