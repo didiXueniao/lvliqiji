@@ -1,6 +1,6 @@
 
 <view>
-  this is a blank page
+  this is a index page
 </view>
 <button onTap="onSubmit">
   点我去首页
