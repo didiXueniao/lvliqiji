@@ -1,7 +1,7 @@
 
 <view>
-  this is a blank page
-</view>
 <button onTap="onSubmit">
   点我去首页
 </button>
+</view>
+

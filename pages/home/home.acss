@@ -1,0 +1,17 @@
+.swiper-box{
+    background-color: gray;
+}
+.swiper-item{
+    margin: 10px 0;
+    text-align: center;
+    display: block;
+  }
+  .homeTitle{
+    margin: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+  }
+  .productShow{
+    margin: 10px;
+  }
