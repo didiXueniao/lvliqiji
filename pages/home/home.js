@@ -7,6 +7,20 @@ Page({
       '/image/huafu1.jpg',
       '/image/huafu2.jpg',
     ],
+    list: [
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '财富洞察',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '投资讲堂',
+      },
+      {
+        icon: 'https://gw.alipayobjects.com/zos/rmsportal/VBqNBOiGYkCjqocXjdUj.png',
+        text: '常见问题',
+      },
+    ],
     circular: false,
     indicatorDots: true,
     autoplay: true,
@@ -14,4 +28,18 @@ Page({
     duration: 500,
   },
   onLoad() {},
+  onItemClick(ev) {
+    if(true) {
+      console.log(ev.detail);
+      my.alert({
+        title: '亲',
+        content: `${ev.detail}`,
+      })
+    } else {
+
+    }
+    my.confirm({
+      
+    });
+  }
 });

@@ -1,4 +1,15 @@
 <view class="homeTitle">{{text}}</view>
+<view>
+  <view>投资助手</view>
+  <view>
+    <grid 
+      onGridItemClick="onItemClick" 
+      columnNum="{{3}}" 
+      list="{{list}}" 
+      hasLine="{{false}}" />
+  </view>
+  <view>跨境银行</view>
+</view>
 <view class="">
   <swiper
     class="swiper-box"
