@@ -1,27 +1,29 @@
-<view class="homeTitle">{{text}}</view>
-<view>
-  <view>投资助手</view>
+<view onTap="handleTapLogonIn">
+  <view class="homeTitle">{{text}}</view>
   <view>
-    <grid 
-      onGridItemClick="onItemClick" 
-      columnNum="{{3}}" 
-      list="{{list}}" 
-      hasLine="{{false}}" />
+    <view>投资助手</view>
+    <view>
+      <grid 
+        onGridItemClick="onItemClick" 
+        columnNum="{{3}}" 
+        list="{{list}}" 
+        hasLine="{{false}}" />
+    </view>
+    <view>跨境银行</view>
   </view>
-  <view>跨境银行</view>
-</view>
-<view class="">
-  <swiper
-    class="swiper-box"
-    indicator-dots="{{indicatorDots}}" 
-    autoplay="{{autoplay}}" 
-    interval="{{interval}}" 
-    circular="{{circular}}"
-    duration="{{duration}}">
-    <block a:for="{{imgUrls}}">
-      <swiper-item class="swiper-item">
-        <image src="{{item}}"/>
-      </swiper-item>
-    </block>
-  </swiper>
+  <view class="">
+    <swiper
+      class="swiper-box"
+      indicator-dots="{{indicatorDots}}" 
+      autoplay="{{autoplay}}" 
+      interval="{{interval}}" 
+      circular="{{circular}}"
+      duration="{{duration}}">
+      <block a:for="{{imgUrls}}">
+        <swiper-item class="swiper-item">
+          <image src="{{item}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
 </view>

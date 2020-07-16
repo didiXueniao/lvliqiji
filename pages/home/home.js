@@ -24,22 +24,65 @@ Page({
     circular: false,
     indicatorDots: true,
     autoplay: true,
-    interval: 5000,
+    interval: 10000,
     duration: 500,
+    hasUserInfo: false,
   },
   onLoad() {},
   onItemClick(ev) {
-    if(true) {
+    if(this.data.hasUserInfo) {
       console.log(ev.detail);
       my.alert({
         title: '亲',
-        content: `${ev.detail}`,
+        content: `您正在访问${ev.detail.index}号服务`,
       })
     } else {
-
+      my.confirm({
+        title: '温馨提示',
+        content: '您还未登录，请登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: () => {
+          my.getAuthCode({
+            scopes: 'auth_user',//auth_base  auth_zhima
+            fail: (error) => {
+              console.error('getAuthCode', error);
+            },
+            success: () => {
+              my.getAuthUserInfo({
+                fail: (error) => {
+                  console.error('getAuthUserInfo', error);
+                },
+                success: (userInfo) => {
+                  console.log(`userInfo:`, userInfo);
+                  this.setData({
+                    hasUserInfo: true,
+                  });
+                  my.alert({
+                    title: '获取用户信息成功',
+                    content: `尊敬的${userInfo.nickName}会员，您好。`,
+                  });
+                  setTimeout(() => {
+                    this.setData({
+                      hasUserInfo: false
+                    })
+                  }, 60000);
+                }
+              });
+            }
+          });
+        }
+      });
     }
-    my.confirm({
-      
-    });
+    
+  },
+  handleTapLogonIn() {
+    if(this.data.hasUserInfo){
+      setTimeout(() => {
+        this.setData({
+          hasUserInfo: false
+        })
+      }, 60000);
+    }
   }
 });
